@@ -14,7 +14,7 @@
 </head>
 <body>
 	<nav class="mui-bar mui-bar-tab myfooter">
-	    <a class="mui-tab-item mui-active">
+	    <a class="mui-tab-item mui-active" id="btn">
 	        <span class="mui-icon icon iconfont icon-qianbaopengyou"></span>
 	        <span class="mui-tab-label">首页</span>
 	    </a>
@@ -35,5 +35,17 @@
 	        <span class="mui-tab-label">我的</span>
 	    </a>
 	</nav>
+	<script type="text/javascript">
+		//事件绑定
+		//方法1
+		var btn = docuemnt.getElementById('btn');
+		btn.addEventListener('tap',function(){
+			
+		})
+		//方法2
+		mui(".myfooter").on("tap",'mui-tab-item',function(){
+			
+		})
+	</script>
 </body>
 </html>
