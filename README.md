@@ -1,9 +1,7 @@
 # 混合开发 
 
-###mui窗口对象
+### mui窗口对象
 
-```html
-<a>详细信息</a>
 >Webview模块管理应用窗口界面，实现多窗口的逻辑控制管理操作。通过plus.webview可获取应用界面管理对象。
 #方法：
 #### all：获取所有Webview窗口
@@ -395,6 +393,4 @@ WebviewObject : Webview窗口对象
 		plus.webview.show(w); // 显示窗口
 	}
 </script>
-```
-
 ```
