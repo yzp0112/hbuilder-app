@@ -4,3 +4,8 @@
 .mui-bar{
 	-webkit-box-shadow: 0 0 0;
 }
+/*顶栏样式*/
+.mui-bar{
+	height: 50px!important;
+	background: #1b82d2;
+}

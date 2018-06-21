@@ -1,0 +1,29 @@
+.mui-search .mui-placeholder .mui-icon{
+	color: white!important;
+	float: left;
+}
+.mui-search{
+	width: 70%;
+	float: left;
+	margin-top: 3px;
+}
+.mui-search .mui-placeholder{
+	text-align: left;
+	color: #fff;
+	font-size: 12px;
+}
+.mui-icon-speech{
+	font-size: 12px;
+}
+.top-bar a{
+	width: 35px!important;
+	height: 50x!important;
+	float: right!important;
+	line-height: 50px;
+}
+.top-bar a span{
+	display: block!important;
+	height: 50px;
+	color: #fff;
+	font-size: 18px!important;
+}
