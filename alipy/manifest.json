@@ -125,5 +125,69 @@
 				}
 			}
 		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"home.html"
+				],
+				"refer": [
+					"friends.html",
+					"praise.html",
+					"mine.html",
+					"wealth.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"img/banner.png",
+				"img/praise_img5.png",
+				"img/praise_icon7.png",
+				"img/praise_img4.png",
+				"img/praise_img2.png",
+				"img/praise_banner.png",
+				"img/praise_icon1.png",
+				"img/praise_icon.png",
+				"img/praise_icon8.png",
+				"img/praise_icon5.png",
+				"img/add.png",
+				"img/friends_icon6.png",
+				"js/mui.min.js",
+				"css/common.css",
+				"img/1.png",
+				"css/iconfont.css",
+				"img/praise_img3.png",
+				"img/friends_icon3.png",
+				"img/img1.png",
+				"fonts/iconfont.ttf",
+				"img/praise_icon3.png",
+				"js/mui.js",
+				"img/rightimg1.png",
+				"img/praise_icon2.png",
+				"img/soyiso.png",
+				"img/praise_img6.png",
+				"img/friends_icon2.png",
+				"fonts/mui.ttf",
+				"img/friends_icon4.png",
+				"img/mine.png",
+				"css/mui.css",
+				"img/friends_icon1.png",
+				"img/friends_icon8.png",
+				"img/friends_icon7.png",
+				"img/praise_icon4.png",
+				"img/contact.png",
+				"img/praise_icon9.png",
+				"img/friends_icon5.png",
+				"css/mui.min.css",
+				"img/praise_img1.png",
+				"img/img2.png",
+				"img/logo.png",
+				"img/rightimg.png",
+				"img/praise_icon6.png"
+			]
+		}
 	}
 }

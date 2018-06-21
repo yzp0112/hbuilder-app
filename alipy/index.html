@@ -14,23 +14,23 @@
 </head>
 <body>
 	<nav class="mui-bar mui-bar-tab myfooter">
-	    <a class="mui-tab-item mui-active" id="btn">
+	    <a class="mui-tab-item mui-active" id="btn" href="home.html">
 	        <span class="mui-icon icon iconfont icon-qianbaopengyou"></span>
 	        <span class="mui-tab-label">首页</span>
 	    </a>
-	    <a class="mui-tab-item">
+	    <a class="mui-tab-item" href="wealth.html">
 	        <span class="mui-icon icon iconfont icon-caifua"></span>
 	        <span class="mui-tab-label">财富</span>
 	    </a>
-	    <a class="mui-tab-item">
+	    <a class="mui-tab-item" href="praise.html">
 	        <span class="mui-icon icon iconfont icon-gouwu"></span>
 	        <span class="mui-tab-label">口碑</span>
 	    </a>
-	    <a class="mui-tab-item">
+	    <a class="mui-tab-item" href="friends.html">
 	        <span class="mui-icon icon iconfont icon-shejiao"></span>
 	        <span class="mui-tab-label">朋友</span>
 	    </a>
-	    <a class="mui-tab-item">
+	    <a class="mui-tab-item" href="mine.html">
 	        <span class="mui-icon icon iconfont icon-changbei"></span>
 	        <span class="mui-tab-label">我的</span>
 	    </a>
@@ -38,13 +38,37 @@
 	<script type="text/javascript">
 		//事件绑定
 		//方法1
-		var btn = docuemnt.getElementById('btn');
-		btn.addEventListener('tap',function(){
-			
-		})
+//		var btn = docuemnt.getElementById('btn');
+//		btn.addEventListener('tap',function(){
+//			
+//		})
 		//方法2
-		mui(".myfooter").on("tap",'mui-tab-item',function(){
+		/*mui(".myfooter").on("tap",'mui-tab-item',function(){
 			
+		})*/
+		
+		var subpages = ['home.html','wealth.html','praise.html','friends.html','mine.html'];
+		
+		mui.plusReady(function(){
+			var currentWebview = plus.webview.currentWebview();//当前页面窗口对象
+			for(var i=0;i<5;i++){
+				var sub = plus.webview.create(subpages[i],subpages[i],{
+					top:'50px',
+					bottom:'50px'
+				});
+				currentWebview.append(sub)
+				if(i>0){//隐藏第一个之外的页面
+					sub.hide()
+				}
+			}
+		})
+		mui('.myfooter').on('tap','a',function(){
+			var currentActiveTab = this.getAttribute('href');
+			if(currentActiveTab == mui(".mui-active")[0].getAttribute('href')){
+				return ;
+			}
+			plus.webview.hide(mui(".mui-active")[0].getAttribute('href'));
+			plus.webview.show(currentActiveTab);
 		})
 	</script>
 </body>
