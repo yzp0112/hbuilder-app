@@ -27,3 +27,65 @@
 	color: #fff;
 	font-size: 18px!important;
 }
+
+.mui-content{
+	padding-top: 50px!important;
+}
+.myicon{
+	height: 70px;
+	background: #1B82D2;
+}
+.myicon a{
+	display: block;
+	height: 50px;
+	width: 50px;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+}
+.myicon a .icon{
+	margin-top: 5px;
+	display: block;
+	font-size: 30px;
+}
+.myicon a .word{
+	font-size: 12px;
+	margin-top: 5px;
+}
+.seconlineicon{
+	height: 205px;
+	background: #fff;
+}
+.seconlineicon .mui-col-sm-3{
+	margin-top: 3px;
+}
+.seconlineicon a{
+	display: block;
+	text-align: center;
+	height: 58px;
+	padding-top: 10px;
+}
+
+.seconlineicon .icon{
+	font-size: 25px;
+	display: block;
+}
+.seconlineicon .word{
+	font-size: 13px;
+	color: #000;
+	display: block;
+	margin-top: 5px;
+}
+.icon-zhuanzhang,
+.icon-shuidianmei,
+.icon-jipiao,
+.icon-zhaocaibao,
+.icon-dache{color:#1d8fe1!important;}
+
+.icon-xinyongqiahuankuan,
+.icon-shoujichongzhi,
+.icon-kuaidi{color: #f39826;}
+.icon-icon,
+.icon-taobao,
+.icon-tianmaobao{color: #F15A4A;}
+.icon-logo{color: #3ab29a;}
