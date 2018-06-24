@@ -89,3 +89,17 @@
 .icon-taobao,
 .icon-tianmaobao{color: #F15A4A;}
 .icon-logo{color: #3ab29a;}
+.newslist{
+	margin-top: 20px;
+}
+.linkgroup{
+	background: #fff;
+}
+.hui{
+	height: 50px;
+	line-height: 50px;
+	padding-left:20px;
+}
+.rightborder{
+	border-right: 1px solid #efeff4;
+}
