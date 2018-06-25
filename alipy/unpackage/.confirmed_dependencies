@@ -10,5 +10,13 @@
 			"mine.html",
 			"wealth.html"
 		]
+	},
+	"praise.html": {
+		"resources": [
+			"praise_list.html"
+		],
+		"refer": [
+			"praise_list.html"
+		]
 	}
 }

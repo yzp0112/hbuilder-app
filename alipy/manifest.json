@@ -139,6 +139,13 @@
 					"wealth.html"
 				],
 				"priority": 0
+			},
+			"praise.html": {
+				"resources": [
+					"praise_list.html"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
