@@ -110,8 +110,10 @@ plus.webview.currentWebview()  获取当前页面所属的Webview窗口对象
 		document.addEventListener('plusready', plusReady, false);
 	}
 </script>
-```				
+```
+
 #### getDisplayWebview:获取屏幕所有可视的Webview窗口
+
 ```
 plus.webview.getDisplayWebview()
 仅在屏幕区域显示的Webview窗口，如果Webview窗口显示了但被其它Webview窗口盖住则认为不可视。
@@ -134,8 +136,10 @@ Array[ WebviewObject ] : 屏幕中可视的Webview窗口对象数组。
 		document.addEventListener('plusready', plusReady, false);
 	}
 </script>
-```				
-####getWebviewById:查找指定标识的WebviewObject窗口
+```
+
+#### getWebviewById:查找指定标识的WebviewObject窗口
+
 ```
 plus.webview.getWebviewById( id )
 在已创建的窗口列表中查找指定标识的Webview窗口并返回。 若没有查找到指定标识的窗口则返回null，若存在多个相同标识的Webview窗口，则返回第一个创建的Webview窗口。 如果要获取应用入口页面所属的Webview窗口，其标识为应用的%APPID%，可通过plus.runtime.appid获取。
@@ -159,8 +163,10 @@ WebviewObject : WebviewObject窗口对象
 		document.addEventListener('plusready', plusReady, false);
 	}
 </script>
-```				
+```
+
 ####getLaunchWebview:获取应用首页WebviewObject窗口对象
+
 ```
 plus.webview.getLaunchWebview()
 
@@ -180,8 +186,10 @@ WebviewObject : WebviewObject窗口对象
 		document.addEventListener('plusready', plusReady, false);
 	}
 </script>
-```				
+```
+
 ####getSecondWebview:获取应用第二个首页WebviewObject窗口对象
+
 ```
 plus.webview.getSecondWebview()
 在双首页模式下（在manifest.json的plus->secondwebview节点下配置），应用会自动创建两个首页Webview，通过getLaunchWebview()可获取第一个首页窗口对象，通过getSecondWebview()可获取第二个首页窗口对象。
@@ -206,8 +214,10 @@ WebviewObject : WebviewObject窗口对象，在非双首页模式下则返回und
 		document.addEventListener('plusready', plusReady, false);
 	}
 </script>
-```				
+```
+
 ####getTopWebview:获取应用显示栈顶的WebviewObject窗口对象
+
 ```
 plus.webview.getTopWebview()
 返回值：
@@ -227,7 +237,9 @@ WebviewObject : WebviewObject窗口对象
 	}
 </script>
 ```
+
 ####hide:隐藏Webview窗口
+
 ```
 plus.webview.hide( id_wvobj, aniHide, duration, extras )
 根据指定的WebviewObject对象或id隐藏Webview窗口，使得窗口不可见。
@@ -259,7 +271,9 @@ extras: ( WebviewExtraOptions ) 可选 隐藏Webview窗口扩展参数
 	}
 </script>
 ```
+
 ####open：创建并打开Webview窗口
+
 ```
 plus.webview.open( url, id, styles, aniShow, duration, showedCB )
 创建并显示Webview窗口，用于加载新的HTML页面，可通过styles设置Webview窗口的样式，创建完成后自动将Webview窗口显示出来。
@@ -294,7 +308,9 @@ WebviewObject : WebviewObject窗口对象
 	}
 </script>
 ```
-####prefetchURL:预载网络页面
+
+#### prefetchURL:预载网络页面
+
 ```
 plus.webview.prefetchURL(url)
 预载网络页面会向服务器发起http/https请求获取html页面内容， 待Webview窗口加载此url页面时会则根据缓存机制优先使用预载
@@ -325,7 +341,9 @@ url: ( String ) 必选 需要预载的页面地址,必须是网络地址（http/
 	}
 </script>
 ```
-####prefetchURLs:预载网络页面（多个地址）
+
+#### prefetchURLs:预载网络页面（多个地址）
+
 ```
 plus.webview.prefetchURLs(urls)
 预载网络页面会向服务器发起http/https请求获取html页面内容， 待Webview窗口加载此url页面时会则根据缓存机制优先使用预载
@@ -362,7 +380,9 @@ urls: ( Array[ String ] ) 必选 需要预载的页面地址数组,数组项必�
 	}
 </script>
 ```
-####show:显示Webview窗口
+
+#### show:显示Webview窗口
+
 ```
 plus.webview.show( id_wvobj, aniShow, duration, showedCB, extras )
 显示已创建或隐藏的Webview窗口，需先获取窗口对象或窗口id，并可指定显示窗口的动画及动画持续时间。
