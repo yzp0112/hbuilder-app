@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/mine.css" />
+	</head>
+
+	<body> 
+		<div class="mui-content"  id="refreshContainer">
+		    
+		
+		<ul class="mui-table-view mine-header">
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <img class="mui-media-object mui-pull-left mine-img" src="img/mine.png" id="myimg">
+		            <div class="mui-media-body">
+		            	<p class="mine-infor">张三丰</p>
+		                <p class="mui-ellipsis infor">186****19</p>
+		            </div>
+		        </a>
+		    </li>
+		</ul>
+		<ul class="mui-table-view mine-content">
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <span class="icon iconfont icon-jizhang mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">账单</span>
+		                
+		            </div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right"> 
+		            <span class="icon iconfont icon-xinyongqiahuankuan mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">信用卡</span>
+		                
+		            </div>
+		        </a>
+		    </li>
+		    
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <span class="icon iconfont icon-icon mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">余额</span> 
+		              
+		            </div>
+		        </a> 
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <span class="icon iconfont icon-yulebao mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">娱乐宝</span> 
+		              
+		            </div>
+		        </a> 
+		    </li>
+		    
+		</ul>
+		<ul class="mui-table-view mine-content">
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <span class="icon iconfont icon-jizhang mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">账单</span>
+		                
+		            </div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right"> 
+		            <span class="icon iconfont icon-xinyongqiahuankuan mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">信用卡</span>
+		                
+		            </div>
+		        </a>
+		    </li>
+		    
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <span class="icon iconfont icon-icon mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">余额</span> 
+		              
+		            </div>
+		        </a> 
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <span class="icon iconfont icon-yulebao mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">娱乐宝</span> 
+		              
+		            </div>
+		        </a> 
+		    </li>
+		    
+		</ul>
+		<ul class="mui-table-view mine-content">
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <span class="icon iconfont icon-jizhang mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">账单</span>
+		                
+		            </div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right"> 
+		            <span class="icon iconfont icon-xinyongqiahuankuan mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">信用卡</span>
+		                
+		            </div>
+		        </a>
+		    </li>
+		    
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <span class="icon iconfont icon-icon mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">余额</span> 
+		              
+		            </div>
+		        </a> 
+		    </li>
+		    <li class="mui-table-view-cell mui-media">
+		        <a href="javascript:;" class="mui-navigate-right">
+		            <span class="icon iconfont icon-yulebao mineicon"></span>
+		            <div class="mui-media-body">
+		                <span class="lititle">娱乐宝</span> 
+		              
+		            </div>
+		        </a> 
+		    </li>
+		    
+		</ul>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init({
+		  pullRefresh : {
+		    container:'#refreshContainer',
+		    down : {
+		      callback :pulldownfresh
+		    },
+		    up : {
+		      callback :pullupfresh 
+		    }
+		  }
+		});
+		function pulldownfresh(){
+			alert("进行数据刷新");
+			mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+		}
+		function pullupfresh(){
+			alert("进行数据加载");
+			mui('#refreshContainer').pullRefresh().endPullupToRefresh();
+		}
+		var myimg = document.getElementById("myimg");
+		myimg.addEventListener("tap",function(){
+			var imgSrc = this.getAttribute("src");
+			mui.openWindow({
+				url: 'mine_image.html',
+				id: 'mine_image.html',
+				extras: {
+					imgSrc: imgSrc
+				}
+			})
+		})
+	</script>
+	<script>
+		
+	</script>
+</html>

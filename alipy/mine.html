@@ -6,13 +6,32 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/mine.css" />
 	</head>
 
-	<body style="background: black;">
+	<body>
+		<header class="mui-bar mui-bar-nav index-bar">
+		    <span class="mui-pull-left mine">我的</span> 
+		    
+		    <a href="##" class="mui-pull-right settings"> 
+		    	设置 
+		    </a>
+		</header>
+		<button id="btn">拨号</button>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init({
+				subpages:[{
+				  url:'mine_list.html',
+			      id:'min_list.html',
+			      styles:{
+			        top: "50px",
+			        bottom: "0px" 
+			      },
+			      extras:{}
+				}]
+			})
 		</script>
 	</body>
-
 </html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<img src="" id="myimg" width="100%"/>
+		<button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="pick">相册</button>
+		<button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="capture">拍照</button>
+		<button></button>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui.plusReady(function(){
+				var currentWindow = plus.webview.currentWebview();
+				myimg.src = currentWindow.imgSrc;
+			})
+			var myimg = document.getElementById('myimg');
+			var pick = document.getElementById('pick');
+			var capture = document.getElementById('capture');
+			pick.addEventListener('tap',function(){
+				plus.gallery.pick(function(filepath){
+					myimg.src = filepath
+					 
+				},function(err){
+					
+				})
+			})
+			capture.addEventListener('tap',function(){
+				var cm = plus.camera.getCamera();
+				cm.captureImage(function(filepath){
+					var absolutepath = plus.io.convertLocalFileSystemURL(filepath);
+					myimg.src = absolutepath;
+				},function(err){
+					
+				})
+				
+			})
+		</script>
+	</body>
+
+</html>
