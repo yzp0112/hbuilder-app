@@ -60,7 +60,9 @@ extras: ( WebviewExtraOptions ) 可选 关闭Webview窗口扩展参数
 	}
 </script>
 ```
-####create:创建新的Webview窗口
+
+#### create:创建新的Webview窗口
+
 ```
  plus.webview.create( url, id, styles, extras )
  创建Webview窗口，用于加载新的HTML页面，可通过styles设置Webview窗口的样式，创建完成后需要调用show方法才能将
@@ -90,7 +92,9 @@ extras: ( JSON ) 可选 创建Webview窗口的额外扩展参数
 	}
 </script>
 ```
-####currentWebview:获取当前窗口的WebviewObject对象
+
+#### currentWebview:获取当前窗口的WebviewObject对象
+
 ```
 plus.webview.currentWebview()  获取当前页面所属的Webview窗口对象
 返回值：WebviewObject : Webview窗口对象
@@ -107,7 +111,7 @@ plus.webview.currentWebview()  获取当前页面所属的Webview窗口对象
 	}
 </script>
 ```				
-####getDisplayWebview:获取屏幕所有可视的Webview窗口
+#### getDisplayWebview:获取屏幕所有可视的Webview窗口
 ```
 plus.webview.getDisplayWebview()
 仅在屏幕区域显示的Webview窗口，如果Webview窗口显示了但被其它Webview窗口盖住则认为不可视。
