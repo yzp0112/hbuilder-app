@@ -165,7 +165,7 @@ WebviewObject : WebviewObject窗口对象
 </script>
 ```
 
-####getLaunchWebview:获取应用首页WebviewObject窗口对象
+#### getLaunchWebview:获取应用首页WebviewObject窗口对象
 
 ```
 plus.webview.getLaunchWebview()
@@ -188,7 +188,7 @@ WebviewObject : WebviewObject窗口对象
 </script>
 ```
 
-####getSecondWebview:获取应用第二个首页WebviewObject窗口对象
+#### getSecondWebview:获取应用第二个首页WebviewObject窗口对象
 
 ```
 plus.webview.getSecondWebview()
@@ -216,7 +216,7 @@ WebviewObject : WebviewObject窗口对象，在非双首页模式下则返回und
 </script>
 ```
 
-####getTopWebview:获取应用显示栈顶的WebviewObject窗口对象
+#### getTopWebview:获取应用显示栈顶的WebviewObject窗口对象
 
 ```
 plus.webview.getTopWebview()
@@ -238,7 +238,7 @@ WebviewObject : WebviewObject窗口对象
 </script>
 ```
 
-####hide:隐藏Webview窗口
+#### hide:隐藏Webview窗口
 
 ```
 plus.webview.hide( id_wvobj, aniHide, duration, extras )
@@ -272,7 +272,7 @@ extras: ( WebviewExtraOptions ) 可选 隐藏Webview窗口扩展参数
 </script>
 ```
 
-####open：创建并打开Webview窗口
+#### open：创建并打开Webview窗口
 
 ```
 plus.webview.open( url, id, styles, aniShow, duration, showedCB )
