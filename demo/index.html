@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">拍照功能</h1>
+	</header>
+	<div class="mui-content">
+	    <button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="btn">按钮</button>
+	    <img id="img1" src=""/>
+	</div>
+	<script type="text/javascript">
+		//http://www.html5plus.org/doc/zh_cn/camera.html
+		var btn = document.getElementById('btn');
+		btn.onclick = function(){
+			//得到摄像头对象
+			var cm = plus.camera.captureImage();
+			cm.captureImage(function(filepath){
+				//拍照成功处理
+				var myimg = plus.io.convertLocalFileSystemURL(filepath)
+				var img1 = document.getElementById('img1');
+				img1.src = myimg;
+			},function(err){
+				//拍照失败处理
+				//err.code;
+				//err.message
+			},{
+				filename:"",
+				format:'',
+				index:1,
+				popover: {}
+			})
+		}
+	</script>
+</body>
+</html>
