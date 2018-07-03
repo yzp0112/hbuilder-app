@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui.plusReady(function(){
+				//地理位置对象 plus.geolocation
+				plus.geolocation.getCurrentPosition(function(p){
+					var city = p.address.city;//当前城市
+					var lng = p.coords.longitude;//经纬度
+					var lat = p.coords.latitude;
+					
+				},function(err){
+					
+				},{
+					enableHighAccuracy:true,//高精度获取位置
+					timeout:'3000'//超时时间
+				})
+			})
+		</script>
+	</body>
+
+</html>
