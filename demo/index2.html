@@ -12,6 +12,7 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
+			//http://www.html5plus.org/doc/zh_cn/geolocation.html
 			mui.plusReady(function(){
 				//地理位置对象 plus.geolocation
 				plus.geolocation.getCurrentPosition(function(p){
@@ -23,7 +24,14 @@
 					
 				},{
 					enableHighAccuracy:true,//高精度获取位置
-					timeout:'3000'//超时时间
+					timeout:3000//超时时间
+				})
+				
+				//http://www.html5plus.org/doc/zh_cn/geolocation.html#plus.geolocation.watchPosition
+				plus.geolocation.watchPosition(function(p){
+					
+				},function(err){
+					
 				})
 			})
 		</script>
