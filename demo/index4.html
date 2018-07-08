@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+			mui.plusReady(function(){
+				//http://www.html5plus.org/doc/zh_cn/contacts.html
+				plus.contacts.getAddressBook(0,function(addressbook){
+					addressbook.find(['displayName','phoneNumbers'],function(contactlist){
+						//console.log(contaclist[contaclist.length - 1]['displayName']);//最后一个用户名称
+						for(var i = contactlist.length - 1;i>contactlist.length - 4;i++){
+							console.log(contactlist[i]['displayName']+'的电话号码是'+contactlist[i]['phoneNumbers'][0].value)
+						}
+					},function(error){
+						
+					})
+				},function(error){})
+			})
+		</script>
+	</body>
+
+</html>
